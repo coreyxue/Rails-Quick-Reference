@@ -4,13 +4,13 @@ Rails-Quick-Reference
 #Setting Up Postgres
 --------------------
 #switch to user postgres, if do not know password run: "$sudo passwd postgres" to set the password
-$su - postgres
+$ su - postgres
 #enter psql env
-$psql
+$ psql
 #create role
 create role ROLENAME with createdb login password 'PASSWORD'
 #switch back
-$su ubuntu
+$ su ubuntu
 
 #To create a new rails application using postgresql
 ---------------------------------------------------
@@ -43,13 +43,18 @@ production:
   password: PASSWORD
 #create modle
 rake db:migrate
-  
+
+#Setup heroku
+-------------
+$ [sudo] gem install heroku
+$ heroku keys:add
+
 #Deploy to heroku
 -----------------
-git init
-git add .
-git commit -m "eh"
-heroku create
-git push heroku master
-heroku run rake db:migrate
-(heroku run rake db:seed)
+$ git init
+$ git add .
+$ git commit -m "eh"
+$ heroku create
+$ git push heroku master
+$ heroku run rake db:migrate
+$ (heroku run rake db:seed)
