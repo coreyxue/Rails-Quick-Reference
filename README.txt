@@ -59,7 +59,7 @@ $ git push heroku master
 $ heroku run rake db:migrate
 $ (heroku run rake db:seed)
 
-#-- yml ---
+#-- config gem file ---
 source 'https://rubygems.org'
 gem 'rails', '3.2.3'
 group :development do
@@ -76,3 +76,4 @@ gem 'jquery-rails', '2.0.0'
 group :production do
 gem 'pg'
 end
+--->$bundle install --without production
